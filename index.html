@@ -15,10 +15,20 @@
             text-align:center;
         }
 
-        .container{
-            margin-top:80px;
-        }
+        .main-layout{
+    display:flex;
+    gap:30px;
+    padding:40px;
+}
 
+.profile-section{
+    width:35%;
+}
+
+.dashboard-section{
+    width:65%;
+}
+        
         img{
             width:180px;
             border-radius:50%;
@@ -55,8 +65,10 @@
 
 <body>
 
-<div class="container">
+<div class="main-layout">
 
+  <div class="profile-section">
+  
 <img src="Pik1.jpeg">
 
 <h1>Dr. Seema Verma</h1>
@@ -73,6 +85,8 @@ Generative AI, and Emerging Technologies.
 
 </div>
 
+ <div class="dashboard-section">
+      
 <h2>My Tableau Dashboard</h2>
 
 <p>Click below to view my IPL Analytics Dashboard:</p>
@@ -80,7 +94,9 @@ Generative AI, and Emerging Technologies.
     <a href="https://public.tableau.com/views/IPLAnalyticsDashboard_17797754701500/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" style="color:#00ffd5; font-size:22px;">
     View IPL Analytics Dashboard
 </a>
-    
+    </div>
+
+    </div>
 </body>
 
 </html>
