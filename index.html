@@ -1,62 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Seema Verma | Portfolio</title>
 
     <style>
 
-        body{
+        *{
             margin:0;
             padding:0;
-            font-family:Arial;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
             background:linear-gradient(to right,#141e30,#243b55);
             color:white;
-            text-align:center;
         }
 
         .main-layout{
-    display:flex;
-    gap:30px;
-    padding:40px;
-}
+            display:flex;
+            min-height:100vh;
+        }
 
-.profile-section{
-    width:35%;
-}
+        /* LEFT PROFILE SECTION */
 
-.dashboard-section{
-    width:65%;
-}
-        
-        img{
-            width:180px;
+        .profile-section{
+            width:35%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+            text-align:center;
+        }
+
+        .profile-section img{
+            width:170px;
+            height:170px;
             border-radius:50%;
-            border:5px solid white;
+            border:4px solid white;
+            margin-bottom:25px;
         }
 
-        h1{
-            font-size:50px;
+        .profile-section h1{
+            font-size:52px;
+            margin-bottom:15px;
+            line-height:65px;
         }
 
-        h3{
+        .profile-section h3{
+            font-size:18px;
             color:#00ffd5;
+            margin-bottom:25px;
         }
 
-        p{
-            width:60%;
-            margin:auto;
-            line-height:30px;
-            font-size:20px;
+        .profile-section p{
+            font-size:16px;
+            line-height:32px;
+            width:85%;
+            margin-bottom:30px;
         }
 
-        button{
-            margin-top:20px;
-            padding:15px 30px;
+        .profile-section button{
+            padding:14px 30px;
             border:none;
             border-radius:30px;
             background:#00ffd5;
             font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .profile-section button:hover{
+            background:white;
+        }
+
+        /* RIGHT DASHBOARD SECTION */
+
+        .dashboard-section{
+            width:65%;
+            padding:25px;
+        }
+
+        .dashboard-section h2{
+            text-align:center;
+            font-size:38px;
+            margin-bottom:20px;
+        }
+
+        iframe{
+            width:100%;
+            height:90vh;
+            border:none;
+            border-radius:10px;
+            background:white;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media(max-width:900px){
+
+            .main-layout{
+                flex-direction:column;
+            }
+
+            .profile-section,
+            .dashboard-section{
+                width:100%;
+            }
+
+            .profile-section h1{
+                font-size:42px;
+                line-height:55px;
+            }
+
+            iframe{
+                height:700px;
+            }
         }
 
     </style>
@@ -65,39 +129,47 @@
 
 <body>
 
-<div class="main-layout">
+    <div class="main-layout">
 
-  <div class="profile-section">
-  
-<img src="Pik1.jpeg">
+        <!-- LEFT PROFILE SECTION -->
 
-<h1>Dr. Seema Verma</h1>
+        <div class="profile-section">
 
-<h3>Professor | AI Researcher | Innovator</h3>
+            <img src="Pik1.jpeg" alt="Profile Photo">
 
-<p>
-Welcome to my portfolio website.
-I work in AI, Machine Learning,
-Generative AI, and Emerging Technologies.
-</p>
+            <h1>Dr. Seema Verma</h1>
 
-<button>Contact Me</button>
+            <h3>
+                Professor | AI Researcher | Innovator
+            </h3>
 
-</div>
+            <p>
+                Welcome to my portfolio website.
+                I work in Artificial Intelligence,
+                Machine Learning, Generative AI,
+                and Emerging Technologies.
+            </p>
 
- <div class="dashboard-section">
+            <button>
+                Contact Me
+            </button>
 
-<h2>IPL Analytics Dashboard</h2>
+        </div>
 
-<iframe 
-src="https://public.tableau.com/views/IPLAnalyticsDashboard_17797754701500/Dashboard1?:showVizHome=no"
-width="100%"
-height="700"
-frameborder="0">
-</iframe>
+        <!-- RIGHT DASHBOARD SECTION -->
 
-</div>
+        <div class="dashboard-section">
+
+            <h2>IPL Analytics Dashboard</h2>
+
+            <iframe
+                src="https://public.tableau.com/views/IPLAnalyticsDashboard_17797754701500/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link&:showVizHome=no">
+            </iframe>
+
+        </div>
+
     </div>
+
 </body>
 
 </html>
