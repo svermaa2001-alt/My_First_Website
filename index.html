@@ -4,134 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Dr. Seema Verma | Portfolio</title>
 
     <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        body{
-            font-family:Arial, sans-serif;
-            background:linear-gradient(to right,#141e30,#243b55);
-            color:white;
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
         }
 
-        .main-layout{
-            display:flex;
-            min-height:100vh;
+        .main-layout {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
         }
 
-        /* LEFT PROFILE SECTION */
-
-        .profile-section{
-            width:35%;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            padding:40px;
-            text-align:center;
+        .profile-section {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 35px;
         }
 
-        .profile-section img{
-            width:170px;
-            height:170px;
-            border-radius:50%;
-            border:4px solid white;
-            margin-bottom:25px;
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 25px;
         }
 
-        .profile-section h1{
-            font-size:40px;
-            margin-bottom:15px;
-            line-height:65px;
+        .profile-section h1 {
+            font-size: 36px;
+            line-height: 45px;
+            margin-bottom: 18px;
         }
 
-        .profile-section h3{
-            font-size:18px;
-            color:#00ffd5;
-            margin-bottom:25px;
+        .profile-section h3 {
+            font-size: 17px;
+            color: #00ffd5;
+            margin-bottom: 22px;
         }
 
-        .profile-section p{
-            font-size:14px;
-            line-height:32px;
-            width:100%;
-            margin-bottom:30px;
+        .profile-section p {
+            font-size: 15px;
+            line-height: 28px;
+            width: 95%;
+            margin-bottom: 28px;
         }
 
-        .profile-section button{
-            padding:14px 30px;
-            border:none;
-            border-radius:30px;
-            background:#00ffd5;
-            font-size:18px;
-            cursor:pointer;
-            transition:0.3s;
+        .profile-section button {
+            padding: 13px 32px;
+            border: none;
+            border-radius: 30px;
+            background: #00ffd5;
+            color: black;
+            font-size: 17px;
+            cursor: pointer;
         }
 
-        .profile-section button:hover{
-            background:white;
+        .dashboard-section {
+            width: 68%;
+            padding: 20px;
+            overflow: hidden;
         }
 
-        /* RIGHT DASHBOARD SECTION */
-
-        .dashboard-section{
-            width:65%;
-            padding:25px;
+        .dashboard-section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
         }
 
-        .dashboard-section h2{
-            text-align:center;
-            font-size:38px;
-            margin-bottom:20px;
+        .dashboard-frame {
+            width: 100%;
+            height: 82vh;
+            border: none;
+            border-radius: 12px;
+            background: white;
         }
 
-        iframe{
-            width:100%;
-            height:90vh;
-            border:none;
-            border-radius:10px;
-            background:white;
-        }
-
-        /* RESPONSIVE DESIGN */
-
-        @media(max-width:900px){
-
-            .main-layout{
-                flex-direction:column;
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
             }
 
             .profile-section,
-            .dashboard-section{
-                width:100%;
+            .dashboard-section {
+                width: 100%;
             }
 
-            .profile-section h1{
-                font-size:42px;
-                line-height:55px;
-            }
-
-            iframe{
-                height:700px;
+            .dashboard-frame {
+                height: 700px;
             }
         }
-
     </style>
-
 </head>
 
 <body>
 
     <div class="main-layout">
-
-        <!-- LEFT PROFILE SECTION -->
 
         <div class="profile-section">
 
@@ -139,31 +119,25 @@
 
             <h1>Dr. Seema Verma</h1>
 
-            <h3>
-                Professor | AI Researcher | Innovator
-            </h3>
+            <h3>Professor | AI Researcher | Innovator</h3>
 
             <p>
-                Welcome to my portfolio website.
-                I work in Artificial Intelligence,
-                Machine Learning, Generative AI,
-                and Emerging Technologies.
+                Welcome to my portfolio website. I work in Artificial Intelligence,
+                Machine Learning, Generative AI, and Emerging Technologies.
             </p>
 
-            <button>
-                Contact Me
-            </button>
+            <button>Contact Me</button>
 
         </div>
-
-        <!-- RIGHT DASHBOARD SECTION -->
 
         <div class="dashboard-section">
 
             <h2>IPL Analytics Dashboard</h2>
 
             <iframe
-                src="https://public.tableau.com/views/IPLAnalyticsDashboard_17797754701500/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link&:showVizHome=no">
+                class="dashboard-frame"
+                src="https://public.tableau.com/views/IPLAnalyticsDashboard_17797754701500/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link&:showVizHome=no&:toolbar=no"
+                allowfullscreen>
             </iframe>
 
         </div>
